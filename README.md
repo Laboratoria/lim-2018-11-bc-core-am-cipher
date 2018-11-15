@@ -1,69 +1,105 @@
 # Cifrado César
 
-## Preámbulo
-
-Está próxima la fecha del cumpleaños de tu flacx (novix) y estás organizando una
-fiesta sorpresa. Para organizar la fiesta has creado un grupo de Whatsapp junto
-con amigos y familiares.
-
-Un gran problema es que pones tu alarma para levantarte temprano, sin embargo
-(como supondrás) eso nunca sucede y tu flacx es quien termina apagando la alarma
-y "de casualidad" revisando tus mensajes. Debido a que es algo sorpresa, decides
-crear una aplicación que te permita enviar mensajes cifrados y que las demás
-personas (partícipes de la fiesta) puedan tener una interfaz para
-descifrarlo. Así que ahora te toca aplicar tus superpoderes 😎
-
-## Introducción
-
-El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher) es uno de los
-primeros métodos de cifrado conocidos históricamente. Es un tipo de cifrado por
-sustitución en el que una letra en el texto original es reemplazada por otra
-letra que se encuentra un número fijo de posiciones más adelante en el alfabeto.
+Cifrar significa codificar. El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher) es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio César lo usaba para enviar órdenes secretas a sus generales en los campos de batalla.
 
 ![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
 
-El emperador Julio César lo usaba para enviar órdenes a sus generales en los
-campos de batalla, es una de las técnicas más simples y más usadas para cifrar
-un mensaje.
+El cifrado césar es una de las técnicas más simples para cifrar un mensaje. Es un tipo de cifrado por sustitución, es decir que cada letra del texto original es reemplazada por otra que se encuentra un número fijo de posiciones (desplazamiento) más adelante en el mismo alfabeto.
 
-Por ejemplo si usáramos un desplazamiento de 3:
+Por ejemplo, si usamos un desplazamiento (offset) de 3 posiciones:
 
-* Alfabeto sin cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-* Alfabeto cifrado: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
+- La letra A se cifra como D.
+- La palabra CASA se cifra como FDVD.
+- Alfabeto sin cifrar: A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+- Alfabeto cifrado: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 
-Actualmente todos los cifrados de sustitución alfabética simple, se descifran
-con facilidad y en la práctica no ofrece mucha seguridad en la comunicación,
-pero el cifrado César muchas veces puede formar parte de sistemas más complejos
-de codificación, como el cifrado Vigenère, e incluso tiene aplicación en el
-sistema ROT13.
+En la actualidad, todos los cifrados de sustitución simple se descifran con mucha facilidad y, aunque en la práctica no ofrecen mucha seguridad en la comunicación por sí mismos; el cifrado César sí puede formar parte de sistemas más complejos de codificación, como el cifrado Vigenère, e incluso tiene aplicación en el sistema ROT13.
 
-## Objetivos
+## Resumen del proyecto
 
-El objetivo principal de aprendizaje de este proyecto es tener tu primera
-experiencia construyendo una aplicación web usando tus conocimientos de **User
-Experience Design** y de **JavaScript**. Esto incluye diseñar un producto
-pensando en los usuarios, construir una interfaz, escuchar eventos básicos del
-DOM, escribir lógica para llevar a cabo el cifado/descifrado, tests unitarios
-básicos para comprobar (y documentar) dicha lógica, y finalmente manipulación
-del DOM para mostrar (escribir) los resultados.
+¿QUé tengo que hacer exactamente? En este proyecto crearás la primera aplicación web del _bootcamp_. Servirá para que el usuario pueda cifrar y descifrar un texto indicando un desplazamiento específico de caracteres (offset).
 
-Para completar el proyecto tendrás que familiarizarte con conceptos como
-[valores, tipos, variables](https://github.com/Laboratoria/curricula-js/tree/v2.x/topics/javascript/01-basics),
-[control de flujo](https://github.com/Laboratoria/curricula-js/tree/v2.x/topics/javascript/02-flow-control)
-y [tests unitarios](https://github.com/Laboratoria/curricula-js/tree/v2.x/topics/testing).
+La temática es libre. Tú debes pensar en qué situaciones de la vida real se necesitaría cifrar un mensaje y pensar en cómo debe ser esa experiencia de uso (qué pantallas, explicaciones, mensajes, colores, ¿marca?) etc. Algunas ideas de ejemplo:
 
-Esperamos que en este proyecto puedas pensar en el usuario, entendiendo quién es
-y su necesidad. La idea es que logres entender qué necesita el usuario para el
-que crearás el producto y le ayudes a resolver esa necesidad de la mejor manera
-posible.
+- Crear claves seguras para el email.
+- Encriptar/cifrar una tarjeta de crédito.
+- Herramienta de mensajería interna de una organización de derechos humanos en una zona de conflicto.
+- Mensajería secreta para parejas.
 
-Además, que puedas organizarte teniendo en cuenta el tiempo y los recursos
-disponibles. Es la primera vez que evaluaremos tus habilidades blandas, pero debes
-considerar que son habilidades que probablemente ya has utilizado en distintas
-experiencias de tu vida. Lo importante es que realices el proyecto de manera
-integral.
 
 ## Consideraciones generales
+
+- Este proyecto se debe resolver de manera individual.
+- El proyecto será entregado subiendo tu código a GitHub (commit/push) y la interfaz será desplegada usando GitHub pages. Si no sabes lo que es GitHub, no te preocupes, lo aprenderás durante este proyecto.
+- Tiempo para completarlo: Toma como referencia 2 semanas. Trabaja durante el primer Sprint (una semana) y al  final, trata de fijar un estimado de cuándo lo terminarás.
+
+## Objetivos de aprendizaje
+
+En este proyecto aprenderás a construir una aplicación web con interacción con el usuario a través del navegador y lógica basada en esa interacción. Dicho en palabras sencillas, aprenderás a:
+
+- Pintar elementos de formulario en la pantalla usando **HTML** y **CSS**.
+- Permitir al usuario interactuar (**eventos del DOM**) y hacer algo cuando ocurran dichos eventos (cifrar/descifrar).
+- Manipular **strings** (cadenas de texto).
+- Usar **control de flujo** (bucles, condicionales, ...).
+- Actualizar la pantalla con los resultados (**manipular el DOM**).
+- **Implementar funciones** dada una descripción de su comportamiento.
+- Verificar tu implementación con **pruebas unitarias**.
+- Entender las **necesidades del usuario** y cómo proponer una solución.
+- Organizar tu tiempo y priorizar tareas en un entorno de **alta incertidumbre**.
+
+## Parte Obligatoria
+
+Usa este alfabeto simple  (solamente mayúsculas y sin ñ):
+
+- A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+#### Definición del producto
+
+En el README.md, cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso para definir el producto final a nivel de experiencia y de interfaz.
+
+- Quiénes son los principales usuarios de producto.
+- Cuáles son los objetivos de estos usuarios en relación con tu producto.
+- Cómo crees que el producto que estás creando está resolviendo sus problemas.
+
+#### Interfaz de usuario (UI)
+
+La interfaz debe permitir al usuario:
+- Elegir un desplazamiento (offset) indicando cuántas posiciones queremos que el cifrado desplace cada caracter.
+- Insertar un mensaje (texto) que queremos cifrar.
+- Ver el resultado del mensaje cifrado.
+- Insertar un mensaje (texto) a descifrar.
+- Ver el resultado del mensaje descifrado.
+
+#### Scripts / Archivos
+
+* `README.md`: debe explicar cómo descargar, instalar y ejecutar la aplicación
+  así como una introducción a la aplicación, su funcionalidad y decisiones de
+  diseño que tomaron.
+* `src/index.html`: este es el punto de entrada a tu aplicación. Este archivo
+  debe contener to _markup_ (HTML) e incluir el CSS y JavaScript necesario.
+* `src/cipher.js`: acá debes implementar el objeto cipher, el cual debe estar
+  _exportado_ en el objeto global (`window`). Este objeto (`cipher`) debe
+  contener dos métodos:
+  - `cipher.encode(offset, string)`: `offset` es el número de posiciones que
+    queremos mover a la derecha en el alfabeto y `string` el mensaje (texto)
+    que queremos cifrar.
+  - `cipher.decode(offset, string)`: `offset` es el número de posiciones que
+    queremos mover a la izquierda en el alfabeto y `string` el mensaje
+    (texto) que queremos descifrar.
+* `src/index.js`: acá debes escuchar eventos del DOM, invocar `cipher.encode()`
+  o `cipher.decode()` según sea necesario y actualizar el resultado en la UI.
+* `test/cipher.spec.js`: este archivo contiene algunos tests de ejemplo y acá
+  tendrás que implementar los tests para `cipher.encode()` y `cipher.decode()`.
+
+## Parte opcional o “Hacker edition”
+
+Las secciones llamadas “Hacker Edition” son opcionales. Si **terminaste** con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
+
+La descripción general de este proyecto no menciona qué pasaría con las letras minúsculas y otros caracteres (como espacios, puntuación, ñ, ...). El boilerplate incluye algunos tests (comentados en principio) que puedes usar como punto de partida para implementar soporte para estos casos.
+
+Tampoco se menciona qué pasaría si el offset fuera negativo. Como parte del hacker edition te invitamos a explorar también esta caso por tu cuenta.
+
+## Vamos a  los detalles. Consideraciones Técnicas
 
 La lógica del proyecto debe estar implementada completamente en JavaScript (ES6).
 En este proyecto NO está permitido usar librerías o frameworks, sólo
@@ -114,145 +150,64 @@ entorno (browser en este caso) y las [reglas recomendadas (`"eslint:recommended"
 En cuanto a reglas/guías de estilo en sí,
 usaremos las recomendaciones _por defecto_ de tanto `eslint` como `htmlhint`.
 
-## Parte obligatoria
-
-### Definición del producto
-
-En el `README.md` cuéntanos cómo pensaste en los usuarios al desarrollar tu
-producto y cuál fue tu proceso para definir el producto final a nivel de
-experiencia y de interfaz.
-
-* quiénes son los principales usuarios de producto
-* cuáles son los objetivos de estos usuarios en relación con el producto
-* cómo crees que el producto que estás creando les está resolviendo sus
-  problemas
-
-### UI
-
-La interfaz debe permitir al usuario:
-
-* elegir un `offset` indicando cuántas posiciones queremos que el cifrado
-  desplace cada caracter
-* insertar un mensaje (texto) que queremos cifrar
-* ver el resultado del mensaje cifrado
-* insertar un mensaje (texto) a descifrar
-* ver el resultado del mensaje descifrado
-
-### Scripts / Archivos
-
-* `README.md`: debe explicar cómo descargar, instalar y ejecutar la aplicación
-  así como una introducción a la aplicación, su funcionalidad y decisiones de
-  diseño que tomaron.
-* `src/index.html`: este es el punto de entrada a tu aplicación. Este archivo
-  debe contener to _markup_ (HTML) e incluir el CSS y JavaScript necesario.
-* `src/cipher.js`: acá debes implementar el objeto cipher, el cual debe estar
-  _exportado_ en el objeto global (`window`). Este objeto (`cipher`) debe
-  contener dos métodos:
-  - `cipher.encode(offset, string)`: `offset` es el número de posiciones que
-    queremos mover a la derecha en el alfabeto y `string` el mensaje (texto)
-    que queremos cifrar.
-  - `cipher.decode(offset, string)`: `offset` es el número de posiciones que
-    queremos mover a la izquierda en el alfabeto y `string` el mensaje
-    (texto) que queremos decifrar.
-* `src/index.js`: acá debes escuchar eventos del DOM, invocar `cipher.encode()`
-  o `cipher.decode()` según sea necesario y actualizar el resultado en la UI.
-* `test/cipher.spec.js`: este archivo contiene algunos tests de ejemplo y acá
-  tendrás que implementar los tests para `cipher.encode()` y `cipher.decode()`.
-
-## Hacker edition
-
-No estás limitada a implementar solo la parte obligatoria. Te sugerimos crear
-también una función `cipher.createCipherWithOffset()` que reciba un `offset` y
-devuelva un nuevo objeto con dos métodos (`encode` y `decode`) que solo reciban
-el string y usen el `offset` que se pasó a `createCipherWithOffset` a la hora
-de crear el objeto.
-
-Lo anterior, nos ayuda a observar tu capacidad de autoaprendizaje, pudiendo
-agregar a tu trabajo un elemento que lo lleva al siguiente nivel.
-
-Para el diseño de la experiencia de usuario, puedes investigar y aplicar algunas
-de las técnicas y herramientas relacionadas al proceso de diseño como
-entrevistas y testeos con usuarios o sketching y prototipado.
-
-Lo mismo en habilidades blandas, puedes realizar una planificación experta
-teniendo en consideración la utilización de herramientas de planificación, como
-un calendario, trello, papelógrafo u otras, creando un plan paso a paso de cómo
-quiere abarcar el reto o problema. Realizando una estimación realista del
-tiempo.
-
-## Entrega
-
-El proyecto será _entregado_ subiendo tu código a GitHub (`commit`/`push`) y la
-interfaz será desplegada usando GitHub pages.
-
 ## Evaluación
 
-Te aconsejamos revisar [la rúbrica](https://docs.google.com/spreadsheets/d/e/2PACX-1vSkQy1waRpQ-16sn7VogiDTy-Fz5e7OSZSYUCiHC_bkLAKYewr4L8pWJ_BG210PeULe-TjLScNQQT_x/pubhtml#)
+Te aconsejamos revisar [la rúbrica](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vRktPN4ilZtkRN5tUb3DVhgeihwlzk63_-JI3moA-bXpKDbHDioAK2H3qbrwWNb0Ql4wX22Tgv7-PDv/pubhtml)
 para ver la descripción detallada de cada _habilidad_ y cada _nivel_.
+
+Esta es una lista de todas las habilidades involucradas en este proyecto y que evaluaremos cuando lo  completes:
 
 ### General
 
-| Característica/Habilidad | Nivel esperado |
-|--------------------------|----------------|
-| Completitud | 3
-| Investigación | 3
-| Documentación | 2
-
-### Tech
-
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| **JavaScript** | |
-| Estilo | 2
-| Nomenclatura/semántica | 2
-| Funciones/modularidad | 1
-| Estructuras de datos | 0
-| Tests | 2
-| **HTML** | |
-| Validación | 2
-| Estilo | 3
-| Semántica | 2
-| SEO | 0
-| **CSS** | |
-| DRY | 2
-| Responsive | 2
-| **SCM** | |
-| Git | 1
-| GitHub | 2
-| **CS** | |
-| Lógica | 1
-| Arquitectura | 1
-| Patrones/paradigmas | 0
-
-### UX
-
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| User Centricity | 2 |
+| Característica/Habilidad |
+|--------------------------|
+| Completitud |
 
 ### Habilidades Blandas
 
-Para este reto queremos que intentes llegar al nivel 2 por lo menos en 5 de tus
-habilidades blandas y que tengas el nivel 1 en sólo 3 habilidades.
+| Habilidad |
+|-----------|
+| Planificación y organización |
+| Autoaprendizaje |
+| Solución de problemas |
+| Dar y recibir feedback |
+| Adaptabilidad |
+| Trabajo en equipo |
+| Comunicación eficaz |
+| Presentaciones |
 
-| Habilidad | Nivel esperado |
-|-----------|----------------|
-| Planificación y organización | 2
-| Autoaprendizaje | 2
-| Solución de problemas | 2
-| Dar y recibir feedback | 2
-| Adaptabilidad | 2
-| Trabajo en equipo | 1
-| Comunicación eficaz | 1
-| Presentaciones | 1
+### Habilidades Técnicas Front-end
+
+| Habilidad |
+|-----------|
+| **CS** |
+| Lógica |
+| Arquitectura |
+| **SCM** |
+| Git |
+| GitHub |
+| **JavaScript** |
+| Estilo |
+| Nomenclatura/semántica |
+| Funciones/modularidad |
+| Tests |
+| **HTML** |
+| Validación |
+| Estilo |
+| Semántica |
+| **CSS** |
+| DRY |
+| Responsive |
+
+### Habilidades Técnicas UX
+
+| Habilidad |
+|-----------|
+| User Centricity |
 
 ***
 
-## Puntos de experiencia
-
-Este proyecto en el bootcamp te otorgará 100 XP (Puntos de experiencia).
-
-## Primeros pasos
+## Pistas sobre cómo comenzar a trabajar en el proyecto
 
 1. Antes que nada, asegúrate de tener un :pencil: editor de texto en
    condiciones, algo como [Atom](https://atom.io/) o
@@ -277,9 +232,7 @@ Este proyecto en el bootcamp te otorgará 100 XP (Puntos de experiencia).
    pruebas unitarias (unit tests) con el comando `npm test`.
 7. A codear se ha dicho! :rocket:
 
-***
-
-## Tips / Pistas
+## Recursos y temas relacionados
 
 A continuación un video de Michelle que te lleva a través de la fórmula
 matemática del Cifrado César y un par de cosas más que debes saber para
@@ -287,36 +240,54 @@ resolver este proyecto. ¡Escúchala con detenimiento y sigue sus consejos! :)
 
 [![tips caesar cipher](https://img.youtube.com/vi/zd8eVrXhs7Y/0.jpg)](https://www.youtube.com/watch?v=zd8eVrXhs7Y)
 
-También te compartimos más información de lo que Michelle te ha explicado en el
-video anterior:
+Diseño de experiencia de usuario (User Experience Design):
 
+- Ideación
+- Prototipado (sketching)
+- Testeo e Iteración
+
+Desarrollo Front-end:
+
+* Valores
+* Tipos
+* Variables
+* Control de flujo
+* Tests unitarios
 * [Aprende más sobre `charCodeAt()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/charCodeAt)
 * [Aprende más sobre `String.fromCharCode()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/String/fromCharCode)
 * [Aprende más sobre `ASCII`](http://conceptodefinicion.de/ascii/)
 * [Documentación de NPM](https://docs.npmjs.com/)
 
-Estos son algunos tips que te pueden ayudar en la organización y realización de
-tu proyecto, teniendo en cuenta el desarrollo de tus _habilidades blandas_:
+Herramientas:
+- GitHub y GitHub Pages.
+- [Guía de Scrum](https://www.scrumguides.org/docs/scrumguide/v1/scrum-guide-es.pdf): solamente para comenzar a entender cómo organizar tu trabajo.
 
-* Para comenzar realiza una organización de tu proyecto, ve con qué recursos
-  cuentas y el tiempo que tienes para completarlo.
-* Si hay algo que no sepas pregunta e intenta resolverlo; puedes comenzar con
-  una búsqueda en google, luego consultando a tu squad y por último a tus
-  coaches. Si hay algo que yo no sé, otro me puede ayudar. El aprendizaje es un
-  proceso colaborativo.
-* Una vez que empieces a avanzar pide feedback, tus compañeras pueden tener
-  excelentes ideas o formas de resolver el proyecto que te pueden ayudar.
-* Cuando te topes con un problema, busca alternativas, y para eso consulta
-  diferentes fuentes.
-* Si ya te ves invirtiendo mucho tiempo en detalles debes saber priorizar y
-  seguir con lo más importante, los proyectos tienen tiempo limitado y debes
-  saber administrarlo.
-* Trabaja en equipo, pregunta e intenta completar el proyecto sin rendirte.
-* Prepara tu presentación, si no logro comunicar mis ideas a los demás no se
-  podrá apreciar todo el esfuerzo y trabajo que invertiste.
+## Checklist
+Esta sección está  para ayudarte a llevar un control de lo que vas  commpletando.
 
-## Recursos (Q & A)
+### Parte Obligatoria
+* [ ] `README.md` incluye info sobre proceso y decisiones de diseño.
+* [ ] `README.md` explica claramente quiénes son los usuarios y su relación con
+  el producto.
+* [ ] `README.md` explica claramente cómo el producto soluciona los
+  problemas/necesidades de los usuarios.
+* [ ] Usa VanillaJS.
+* [ ] No utiliza `this`.
+* [ ] Implementa `cipher.encode`.
+* [ ] Implementa `cipher.decode`.
+* [ ] Implementa `cipher.createCipherWithOffset`.
+* [ ] Pasa linter con configuración provista.
+* [ ] Pasa pruebas unitarias.
+* [ ] Pruebas unitarias cubren 70% de _statements_, _functions_ y _lines_, y un
+  mínimo del 50% de _branches_.
+* [ ] Interfaz permite elegir el `offset` o _desplazamiento_ a usar en el
+  cifrado/descifrado.
+* [ ] Interfaz permite escribir un texto para ser cifrado.
+* [ ] Interfaz muestra el resultado del cifrado correctamente.
+* [ ] Interfaz permite escribir un texto para ser descifrado.
+* [ ] Interfaz muestra el resultado del descifrado correctamente.
 
-El código de [sli.do](https://www.sli.do/) para el proyecto 1 :
-
-* Turno am: U414
+### Parte Opcional: "Hacker edition"
+* [ ] Cifra/descifra minúsculas
+* [ ] Cifra/descifra _otros_ caracteres (espacios, puntuación, `ñ`, `á`, ...)
+* [ ] Permite usar un `offset` negativo.
