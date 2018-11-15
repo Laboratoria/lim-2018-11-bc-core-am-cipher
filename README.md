@@ -6,7 +6,7 @@ Cifrar significa codificar. El [cifrado César](https://en.wikipedia.org/wiki/Ca
 
 El cifrado césar es una de las técnicas más simples para cifrar un mensaje. Es un tipo de cifrado por sustitución, es decir que cada letra del texto original es reemplazada por otra que se encuentra un número fijo de posiciones (desplazamiento) más adelante en el mismo alfabeto.
 
-Por ejemplo, si usamos un desplazamiento (offset) de 3 posiciones:
+Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
 
 - La letra A se cifra como D.
 - La palabra CASA se cifra como FDVD.
@@ -17,7 +17,7 @@ En la actualidad, todos los cifrados de sustitución simple se descifran con muc
 
 ## Resumen del proyecto
 
-¿QUé tengo que hacer exactamente? En este proyecto crearás la primera aplicación web del _bootcamp_. Servirá para que el usuario pueda cifrar y descifrar un texto indicando un desplazamiento específico de caracteres (offset).
+¿Qué tengo que hacer exactamente? En este proyecto crearás la primera aplicación web del _bootcamp_. Servirá para que el usuario pueda cifrar y descifrar un texto indicando un desplazamiento específico de caracteres (_offset_).
 
 La temática es libre. Tú debes pensar en qué situaciones de la vida real se necesitaría cifrar un mensaje y pensar en cómo debe ser esa experiencia de uso (qué pantallas, explicaciones, mensajes, colores, ¿marca?) etc. Algunas ideas de ejemplo:
 
@@ -35,11 +35,11 @@ La temática es libre. Tú debes pensar en qué situaciones de la vida real se n
 
 ## Objetivos de aprendizaje
 
-En este proyecto aprenderás a construir una aplicación web con interacción con el usuario a través del navegador y lógica basada en esa interacción. Dicho en palabras sencillas, aprenderás a:
+En este proyecto aprenderás a construir una aplicación web que interactúe con el usuario a través del navegador y la lógica basada en esa interacción. Dicho en palabras sencillas, aprenderás a:
 
 - Pintar elementos de formulario en la pantalla usando **HTML** y **CSS**.
 - Permitir al usuario interactuar (**eventos del DOM**) y hacer algo cuando ocurran dichos eventos (cifrar/descifrar).
-- Manipular **strings** (cadenas de texto).
+- Manipular _**strings**_ (cadenas de texto).
 - Usar **control de flujo** (bucles, condicionales, ...).
 - Actualizar la pantalla con los resultados (**manipular el DOM**).
 - **Implementar funciones** dada una descripción de su comportamiento.
@@ -49,7 +49,7 @@ En este proyecto aprenderás a construir una aplicación web con interacción co
 
 ## Parte Obligatoria
 
-Usa este alfabeto simple  (solamente mayúsculas y sin ñ):
+Usa este alfabeto simple (solamente mayúsculas y sin ñ):
 
 - A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
@@ -64,7 +64,7 @@ En el README.md, cuéntanos cómo pensaste en los usuarios y cuál fue tu proces
 #### Interfaz de usuario (UI)
 
 La interfaz debe permitir al usuario:
-- Elegir un desplazamiento (offset) indicando cuántas posiciones queremos que el cifrado desplace cada caracter.
+- Elegir un desplazamiento (_offset_) indicando cuántas posiciones queremos que el cifrado desplace cada caracter.
 - Insertar un mensaje (texto) que queremos cifrar.
 - Ver el resultado del mensaje cifrado.
 - Insertar un mensaje (texto) a descifrar.
@@ -76,7 +76,7 @@ La interfaz debe permitir al usuario:
   así como una introducción a la aplicación, su funcionalidad y decisiones de
   diseño que tomaron.
 * `src/index.html`: este es el punto de entrada a tu aplicación. Este archivo
-  debe contener to _markup_ (HTML) e incluir el CSS y JavaScript necesario.
+  debe contener tu _markup_ (HTML) e incluir el CSS y JavaScript necesario.
 * `src/cipher.js`: acá debes implementar el objeto cipher, el cual debe estar
   _exportado_ en el objeto global (`window`). Este objeto (`cipher`) debe
   contener dos métodos:
@@ -95,11 +95,11 @@ La interfaz debe permitir al usuario:
 
 Las secciones llamadas “Hacker Edition” son opcionales. Si **terminaste** con todo lo anterior y te queda tiempo, intenta completarlas. Así podrás profundizar y/o ejercitar más sobre los objetivos de aprendizaje del proyecto.
 
-La descripción general de este proyecto no menciona qué pasaría con las letras minúsculas y otros caracteres (como espacios, puntuación, ñ, ...). El boilerplate incluye algunos tests (comentados en principio) que puedes usar como punto de partida para implementar soporte para estos casos.
+La descripción general de este proyecto no menciona qué pasaría con las letras minúsculas y otros caracteres (como espacios, puntuación, ñ, ...). El boilerplate incluye algunos tests (comentados en principio) que puedes usar como punto de partida para implementar el soporte para estos casos.
 
 Tampoco se menciona qué pasaría si el offset fuera negativo. Como parte del hacker edition te invitamos a explorar también esta caso por tu cuenta.
 
-## Vamos a  los detalles. Consideraciones Técnicas
+## Vamos a los detalles. Consideraciones Técnicas
 
 La lógica del proyecto debe estar implementada completamente en JavaScript (ES6).
 En este proyecto NO está permitido usar librerías o frameworks, sólo
@@ -153,9 +153,7 @@ usaremos las recomendaciones _por defecto_ de tanto `eslint` como `htmlhint`.
 ## Evaluación
 
 Te aconsejamos revisar [la rúbrica](https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vRktPN4ilZtkRN5tUb3DVhgeihwlzk63_-JI3moA-bXpKDbHDioAK2H3qbrwWNb0Ql4wX22Tgv7-PDv/pubhtml)
-para ver la descripción detallada de cada _habilidad_ y cada _nivel_.
-
-Esta es una lista de todas las habilidades involucradas en este proyecto y que evaluaremos cuando lo  completes:
+para ver la descripción detallada de cada _habilidad_ y cada _nivel_. Esta es una lista de todas las habilidades involucradas en este proyecto y que evaluaremos cuando lo  completes:
 
 ### General
 
@@ -221,8 +219,8 @@ Esta es una lista de todas las habilidades involucradas en este proyecto y que e
    también). Si usas Windows puedes usar [Git bash](https://git-scm.com/download/win),
    aunque recomendaría que consideres probar :penguin: GNU/Linux.
 3. Haz tu propio :fork_and_knife: [fork](https://help.github.com/articles/fork-a-repo/)
-   del repo de tu cohort, tus _coaches_ te compartirán un _link_ a un repo
-   privado y te darán acceso de lectura en ese repo.
+   del repo de tu cohort, tus _coaches_ te compartirán un _link_ a un repo y te 
+   darán acceso de lectura en ese repo.
 4. :arrow_down: [Clona](https://help.github.com/articles/cloning-a-repository/)
    tu _fork_ a tu computadora (copia local).
 5. 📦 Instala las dependencias del proyecto con el comando `npm
@@ -263,7 +261,7 @@ Herramientas:
 - [Guía de Scrum](https://www.scrumguides.org/docs/scrumguide/v1/scrum-guide-es.pdf): solamente para comenzar a entender cómo organizar tu trabajo.
 
 ## Checklist
-Esta sección está  para ayudarte a llevar un control de lo que vas  commpletando.
+Esta sección está  para ayudarte a llevar un control de lo que vas completando.
 
 ### Parte Obligatoria
 * [ ] `README.md` incluye info sobre proceso y decisiones de diseño.
@@ -275,7 +273,6 @@ Esta sección está  para ayudarte a llevar un control de lo que vas  commpletan
 * [ ] No utiliza `this`.
 * [ ] Implementa `cipher.encode`.
 * [ ] Implementa `cipher.decode`.
-* [ ] Implementa `cipher.createCipherWithOffset`.
 * [ ] Pasa linter con configuración provista.
 * [ ] Pasa pruebas unitarias.
 * [ ] Pruebas unitarias cubren 70% de _statements_, _functions_ y _lines_, y un
